@@ -2,7 +2,7 @@
 name = "pier"
 version = "0.1.0"
 edition = "2021"
-rust-version = "1.74"
+rust-version = "1.85"
 authors = ["pier contributors"]
 description = "Dock at any project in one command — register, list, and switch between dev projects with auto env-loading and setup"
 license = "MIT"
