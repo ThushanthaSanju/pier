@@ -49,7 +49,11 @@ fn load_empty_file_returns_empty_registry() {
 #[test]
 fn save_creates_parent_directory() {
     let dir = tempdir().unwrap();
-    let path = dir.path().join("nested").join("deeper").join("projects.toml");
+    let path = dir
+        .path()
+        .join("nested")
+        .join("deeper")
+        .join("projects.toml");
     let registry = Registry::default();
     registry.save(&path).unwrap();
     assert!(path.exists());

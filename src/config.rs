@@ -95,10 +95,7 @@ pub fn parse_env_file(path: &Path) -> Result<Vec<(String, String)>, ConfigError>
 }
 
 pub fn parse_env_str(contents: &str) -> Vec<(String, String)> {
-    contents
-        .lines()
-        .filter_map(parse_env_line)
-        .collect()
+    contents.lines().filter_map(parse_env_line).collect()
 }
 
 fn parse_env_line(raw: &str) -> Option<(String, String)> {

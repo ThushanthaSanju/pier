@@ -8,9 +8,9 @@ A tiny, fast project switcher written in Rust. Replace the morning ritual of
 `cd`, `source venv/bin/activate`, `set -a; source .env; set +a`, and
 `docker compose up -d` with a single keystroke.
 
+[![CI](https://github.com/ThushanthaSanju/pier/actions/workflows/ci.yml/badge.svg)](https://github.com/ThushanthaSanju/pier/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Rust](https://img.shields.io/badge/rust-1.74%2B-orange.svg)](https://www.rust-lang.org)
-[![Built with care](https://img.shields.io/badge/built%20with-care-ff69b4.svg)](#)
 
 </div>
 

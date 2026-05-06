@@ -119,7 +119,10 @@ pub fn build_switch_script(
 
     match shell {
         ShellKind::Bash | ShellKind::Zsh => {
-            script.push_str(&format!("cd -- {} || return\n", shell_quote_posix(&path_str)));
+            script.push_str(&format!(
+                "cd -- {} || return\n",
+                shell_quote_posix(&path_str)
+            ));
         }
         ShellKind::Fish => {
             script.push_str(&format!("cd {}\n", shell_quote_fish(&path_str)));

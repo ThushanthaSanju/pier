@@ -43,5 +43,8 @@ fn surfaces_parse_errors_with_path() {
     fs::write(dir.path().join("project.toml"), "not valid = = toml").unwrap();
     let err = ProjectConfig::load(dir.path()).unwrap_err();
     let msg = err.to_string();
-    assert!(msg.contains("project.toml"), "error should name the file: {msg}");
+    assert!(
+        msg.contains("project.toml"),
+        "error should name the file: {msg}"
+    );
 }

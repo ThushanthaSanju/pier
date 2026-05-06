@@ -16,10 +16,7 @@ pub fn run(path: Option<PathBuf>, name_override: Option<String>) -> Result<()> {
         .with_context(|| format!("resolving {}", raw_path.display()))?;
 
     if !canonical.is_dir() {
-        return Err(anyhow!(
-            "{} is not a directory",
-            canonical.display()
-        ));
+        return Err(anyhow!("{} is not a directory", canonical.display()));
     }
 
     let name = match name_override {
@@ -35,10 +32,7 @@ pub fn run(path: Option<PathBuf>, name_override: Option<String>) -> Result<()> {
     registry.add(Project::new(name.clone(), canonical.clone()))?;
     registry.save(&registry_path)?;
 
-    ui::print_success(&format!(
-        "registered '{name}' → {}",
-        canonical.display()
-    ));
+    ui::print_success(&format!("registered '{name}' → {}", canonical.display()));
     Ok(())
 }
 
