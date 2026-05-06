@@ -1,0 +1,41 @@
+[package]
+name = "pier"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+authors = ["pier contributors"]
+description = "Dock at any project in one command — register, list, and switch between dev projects with auto env-loading and setup"
+license = "MIT"
+repository = "https://github.com/ThushanthaSanju/pier"
+homepage = "https://github.com/ThushanthaSanju/pier"
+readme = "README.md"
+keywords = ["cli", "productivity", "developer-tools", "project", "workflow"]
+categories = ["command-line-utilities", "development-tools"]
+
+[[bin]]
+name = "pj"
+path = "src/main.rs"
+
+[lib]
+name = "pier"
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4.5", features = ["derive"] }
+directories = "5.0"
+inquire = "0.7"
+owo-colors = "4.1"
+serde = { version = "1.0", features = ["derive"] }
+tabled = "0.15"
+thiserror = "1.0"
+toml = "0.8"
+
+[dev-dependencies]
+tempfile = "3.10"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = "symbols"
