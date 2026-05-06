@@ -27,10 +27,15 @@ $ pj backend
 > The CLI you type is `pj` (project jumper). The project itself is `pier` —
 > the place you dock and depart from.
 
-<!-- Replace with a real terminal recording before publishing. -->
 <p align="center">
-  <img src="docs/demo.gif" alt="pier demo" width="720" />
+  <img src="docs/demo.gif" alt="pier in action" width="900" />
 </p>
+
+<sub align="center">
+
+Demo recorded with [vhs](https://github.com/charmbracelet/vhs) — see [`docs/demo.tape`](docs/demo.tape) to regenerate.
+
+</sub>
 
 ## Table of contents
 
